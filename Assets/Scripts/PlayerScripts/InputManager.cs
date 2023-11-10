@@ -10,12 +10,17 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor motor;
     private PlayerLook look;
+    private PlayerGun playerGun; 
+
     void Awake()
     {
         playerInput = new PlayerInput();
         onFoot = playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
+        playerGun = GetComponent<PlayerGun>();
+
+        onFoot.Shoot.performed += ctx => playerGun.shootBullet(); // when "shoot" action performed call this function
     }
 
     void FixedUpdate()
