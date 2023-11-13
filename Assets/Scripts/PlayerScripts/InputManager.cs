@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
         playerGun = GetComponent<PlayerGun>();
-
+        
         onFoot.Shoot.performed += ctx => playerGun.shootBullet(); // when "shoot" action performed call this function
     }
 
