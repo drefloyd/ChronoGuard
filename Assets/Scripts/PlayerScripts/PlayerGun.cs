@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerGun : MonoBehaviour
 {
     public Transform bulletSpawnPoint;
+    public LayerMask invisBarriers;
     public GameObject bulletPrefab;
     public float bulletSpeed = 5000f;//make sure to change it on the player too, if ypu want to modify speed.
     public Camera PlayerCam;
@@ -18,7 +19,7 @@ public class PlayerGun : MonoBehaviour
         {
             shootTime = Time.time;
             RaycastHit theHit;
-            if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out theHit, Mathf.Infinity))
+            if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out theHit, Mathf.Infinity,~invisBarriers))
             {
                 bulletSpawnPoint.rotation = Quaternion.LookRotation(theHit.point - bulletSpawnPoint.position);
             }
