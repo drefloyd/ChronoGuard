@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class DroneSpawner : MonoBehaviour
 {
-    public GameObject dronePrefab; 
+    public GameObject robotGuardianPrefab;
+    public GameObject robotInvaderPrefab;
+    public GameObject robotRockiePrefab;
 
     public Transform purpleSpawn;
     public Transform greenSpawn;
     public Transform yellowSpawn;
 
-    public float spawnInterval = 1.8f; // Time interval between drone spawns.
+    [SerializeField]
+    public float spawnInterval;
     private float nextSpawnTime;
 
     private void Start()
@@ -31,18 +34,68 @@ public class DroneSpawner : MonoBehaviour
     private void SpawnDrone()
     {
         int spawnChooser = Random.Range(0, 3); // 0,1,2
+        int droneChooser = Random.Range(0, 3); // 0,1,2
 
-        if (spawnChooser == 0)
+        GameObject droneToSpawn;
+        Quaternion? rotationToUse = null;
+
+        Vector3 purpleTempPosition = purpleSpawn.position;
+        Vector3 greenTempPosition = greenSpawn.position;
+        Vector3 yellowTempPosition = yellowSpawn.position;
+
+        if (droneChooser == 0)
         {
-            Instantiate(dronePrefab, purpleSpawn.position, purpleSpawn.rotation);
+            droneToSpawn = robotGuardianPrefab;
+            rotationToUse = Quaternion.Euler(0f, 180f, 0f);
         }
-        else if(spawnChooser == 1)
+        else if (droneChooser == 1)
         {
-            Instantiate(dronePrefab, greenSpawn.position, greenSpawn.rotation);
+            droneToSpawn = robotInvaderPrefab;
+            rotationToUse = Quaternion.Euler(0f, 180f, 0f); // invader and guardian both need unique rotations
         }
         else
         {
-            Instantiate(dronePrefab, yellowSpawn.position, yellowSpawn.rotation);
+            droneToSpawn = robotRockiePrefab;
+        }
+
+        if (spawnChooser == 0)
+        {
+            if (rotationToUse == null)
+            {
+                Instantiate(droneToSpawn, purpleSpawn.position, Quaternion.identity);
+            }
+            else
+            {
+                purpleSpawn.position -= new Vector3(0f, 10f, 0f);   // invader and guardian spawn higher than neccessary
+                Instantiate(droneToSpawn, purpleSpawn.position, (Quaternion)rotationToUse);
+                purpleSpawn.position = purpleTempPosition;
+            }
+        }
+        else if(spawnChooser == 1)
+        {
+            if (rotationToUse == null)
+            {
+                Instantiate(droneToSpawn, greenSpawn.position, Quaternion.identity);
+            }
+            else
+            {
+                greenSpawn.position -= new Vector3(0f, 10f, 0f);
+                Instantiate(droneToSpawn, greenSpawn.position, (Quaternion)rotationToUse);
+                greenSpawn.position = greenTempPosition;
+            }
+        }
+        else
+        {
+            if (rotationToUse == null)
+            {
+                Instantiate(droneToSpawn, yellowSpawn.position, Quaternion.identity);
+            }
+            else
+            {
+                yellowSpawn.position -= new Vector3(0f, 10f, 0f);
+                Instantiate(droneToSpawn, yellowSpawn.position, (Quaternion)rotationToUse);
+                yellowSpawn.position = yellowTempPosition;
+            }
         }
     }
 }

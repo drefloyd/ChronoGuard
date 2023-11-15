@@ -5,7 +5,8 @@ using UnityEngine.InputSystem.XR;
 
 public class DroneController : MonoBehaviour
 {
-    public float droneSpeed = 7f;
+    [SerializeField]
+    public float droneSpeed;    // invader and guardian MUST have negaitves 
 
     void Update()
     {
