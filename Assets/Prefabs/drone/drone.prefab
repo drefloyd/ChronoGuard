@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1775452043854686495}
   - component: {fileID: 4559713700698906069}
   - component: {fileID: 2611831074655348999}
-  - component: {fileID: -1708561150846242045}
+  - component: {fileID: 3146359426265603752}
   m_Layer: 8
   m_Name: drone
   m_TagString: Drone
@@ -107,7 +107,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8251302285044789390, guid: 5f547da8b4bcfd942a0194818f7fb589, type: 3}
---- !u!114 &-1708561150846242045
+--- !u!114 &3146359426265603752
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,4 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736406c31dfee7644b2bae77b3ecf82c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  droneSpeed: 5
+  droneSpeed: 7

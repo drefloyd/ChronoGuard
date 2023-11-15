@@ -6068,7 +6068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1993604283}
-  - component: {fileID: 1993604282}
+  - component: {fileID: 1993604284}
   m_Layer: 0
   m_Name: DroneSpawnManager
   m_TagString: Untagged
@@ -6076,23 +6076,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1993604282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1993604281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc6156968edcc85428132eafecc1f7a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dronePrefab: {fileID: 2614241744216947712, guid: 5bd685975a63f0542b3ac964a6f0f778, type: 3}
-  purpleSpawn: {fileID: 843108096}
-  greenSpawn: {fileID: 2006485462}
-  yellowSpawn: {fileID: 54292234}
-  spawnInterval: 2
 --- !u!4 &1993604283
 Transform:
   m_ObjectHideFlags: 0
@@ -6111,6 +6094,23 @@ Transform:
   - {fileID: 54292234}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1993604284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993604281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6156968edcc85428132eafecc1f7a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dronePrefab: {fileID: 2614241744216947712, guid: 5bd685975a63f0542b3ac964a6f0f778, type: 3}
+  purpleSpawn: {fileID: 843108096}
+  greenSpawn: {fileID: 2006485462}
+  yellowSpawn: {fileID: 54292234}
+  spawnInterval: 1.8
 --- !u!1 &2006485461
 GameObject:
   m_ObjectHideFlags: 0

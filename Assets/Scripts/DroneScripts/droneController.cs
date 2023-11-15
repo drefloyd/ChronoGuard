@@ -5,12 +5,12 @@ using UnityEngine.InputSystem.XR;
 
 public class DroneController : MonoBehaviour
 {
-    public float droneSpeed = 10f;
+    public float droneSpeed = 7f;
 
     void Update()
     {
         // Move the GameObject forward based on its local position
-        transform.Translate(Vector3.forward * droneSpeed * Time.deltaTime);
+        transform.Translate(Vector3.back * droneSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
