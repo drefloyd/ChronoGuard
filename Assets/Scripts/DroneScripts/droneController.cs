@@ -5,29 +5,12 @@ using UnityEngine.InputSystem.XR;
 
 public class DroneController : MonoBehaviour
 {
-    public Transform greenBeacon;
-    public Transform yellowBeacon;
-    public Transform purpleBeacon;
-    private Transform beaconToFollow;
+    public float droneSpeed = 10f;
 
-    public float droneSpeed = 5f;
-
-    void Start()
+    void Update()
     {
-        int beaconChooser = Random.Range(0, 3);    // 0,1,2
-
-        if (beaconChooser == 0)
-        {
-            beaconToFollow = greenBeacon;
-        }
-        else if (beaconChooser == 1)
-        {
-            beaconToFollow = yellowBeacon;
-        }
-        else
-        {
-            beaconToFollow = purpleBeacon;
-        }
+        // Move the GameObject forward based on its local position
+        transform.Translate(Vector3.forward * droneSpeed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -35,21 +18,6 @@ public class DroneController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
-        }
-    }
-    private void Update()
-    {
-        if (beaconToFollow != null)
-        {
-            // Calculate the direction from the drone to the target.
-            Vector3 direction = (beaconToFollow.position - transform.position).normalized;
-
-            // Move the drone towards the target.
-            transform.Translate(direction * droneSpeed * Time.deltaTime);
-        }
-        else
-        {
-            Debug.Log("null beacon");
         }
     }
 }

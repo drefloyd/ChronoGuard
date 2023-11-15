@@ -3,9 +3,12 @@ using UnityEngine;
 public class DroneSpawner : MonoBehaviour
 {
     public GameObject dronePrefab; 
-    public Transform spawnPoint;   
 
-    public float spawnInterval = 2f; // Time interval between drone spawns.
+    public Transform purpleSpawn;
+    public Transform greenSpawn;
+    public Transform yellowSpawn;
+
+    public float spawnInterval = .4f; // Time interval between drone spawns.
     private float nextSpawnTime;
 
     private void Start()
@@ -27,6 +30,19 @@ public class DroneSpawner : MonoBehaviour
 
     private void SpawnDrone()
     {
-        Instantiate(dronePrefab, spawnPoint.position, spawnPoint.rotation);
+        int spawnChooser = Random.Range(0, 3);
+
+        if (spawnChooser == 0)
+        {
+            Instantiate(dronePrefab, purpleSpawn.position, purpleSpawn.rotation);
+        }
+        else if(spawnChooser == 1)
+        {
+            Instantiate(dronePrefab, greenSpawn.position, greenSpawn.rotation);
+        }
+        else
+        {
+            Instantiate(dronePrefab, yellowSpawn.position, yellowSpawn.rotation);
+        }
     }
 }
