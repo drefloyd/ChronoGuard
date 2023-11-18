@@ -9520,8 +9520,40 @@ PrefabInstance:
       value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 4319882715711994096, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 122648, guid: a527ed39d3e1c2b4cabe15b35e6264e7, type: 3}
+    - target: {fileID: 4319882715711994096, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
       propertyPath: invisBarriers.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033747538497081243, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6119714898386895803, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
       propertyPath: m_Name

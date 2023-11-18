@@ -8,7 +8,7 @@ public class PlayerGun : MonoBehaviour
     public Transform bulletSpawnPoint;
     public LayerMask invisBarriers;
     public GameObject bulletPrefab;
-    public float bulletSpeed = 5000f;//make sure to change it on the player too, if ypu want to modify speed.
+    public float bulletSpeed = 5000f;   //make sure to change it on the player too, if ypu want to modify speed.
     public Camera PlayerCam;
     private float shootTime = 0f;
     private float canShootDelay = 0.2f;
@@ -29,9 +29,6 @@ public class PlayerGun : MonoBehaviour
             }
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletSpeed);
-            
-           
         }
-
     }
 }
