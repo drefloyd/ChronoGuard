@@ -21,11 +21,23 @@ public class PlayerGun : MonoBehaviour
             RaycastHit theHit;
             if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out theHit, Mathf.Infinity,~invisBarriers))
             {
-                bulletSpawnPoint.rotation = Quaternion.LookRotation(theHit.point - bulletSpawnPoint.position);
+                //added this distance check because if you shoot the ground it looks weird if the laser flies off at an angle
+                var distance = Vector3.Distance(theHit.point, bulletSpawnPoint.position);               
+                if (distance > 3)
+                {
+                    bulletSpawnPoint.rotation = Quaternion.LookRotation(theHit.point - bulletSpawnPoint.position);
+                }
+                else
+                {
+                    bulletSpawnPoint.rotation = Quaternion.LookRotation(PlayerCam.transform.forward);
+                }
             }
             else
             {
-                bulletSpawnPoint.rotation.Set(0, 0, 0, 0);
+                //Set did not seem to work so rotation only reset after there was another hit
+                //bulletSpawnPoint.rotation.Set(0, 0, 0, 0);
+                //below method seems to reset it better
+                bulletSpawnPoint.rotation = Quaternion.LookRotation(PlayerCam.transform.forward);
             }
             var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
             bullet.GetComponent<Rigidbody>().AddForce(bulletSpawnPoint.forward * bulletSpeed);
