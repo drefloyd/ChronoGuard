@@ -10,15 +10,14 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        pauseMenu.gameisPaused = false; 
-        
+        pauseMenu.gameisPaused = false;
+        timerScript.isTimerRunning = true;
         SceneManager.LoadSceneAsync(1);
-
-
     }
     public void MainScreen()
     {
         Time.timeScale = 1f;
+        timerScript.isTimerRunning = false;
         SceneManager.LoadSceneAsync(0);
         
     }
