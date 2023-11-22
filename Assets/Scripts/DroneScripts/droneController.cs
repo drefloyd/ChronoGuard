@@ -24,7 +24,7 @@ public class DroneController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(explosion,collision.transform.position,Quaternion.identity);
+        Instantiate(explosion, GetComponent<Renderer>().bounds.center, Quaternion.identity);
         if (collision.gameObject.CompareTag("Bullet"))
         {
             playerScoreScript.increaseScore();
