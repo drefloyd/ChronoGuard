@@ -32,7 +32,6 @@ public class pauseMenu : MonoBehaviour
         PlayerUI.SetActive(true);
         Time.timeScale = 1f;
         gameisPaused = false;
-        timerScript.isTimerRunning = true;
     }
     void Pause()
     {
@@ -40,6 +39,5 @@ public class pauseMenu : MonoBehaviour
         PlayerUI.SetActive(false);
         Time.timeScale = 1f;
         gameisPaused = true;
-        timerScript.isTimerRunning = false;
     }
 }

@@ -9,13 +9,6 @@ public class DroneController : MonoBehaviour
     [SerializeField]
     public float droneSpeed;    // invader and guardian MUST have negaitves 
 
-    scoreScript playerScoreScript;
-
-    private void Start()
-    {
-        playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
-    }
-
     void Update()
     {
         // Move the GameObject forward based on its local position
@@ -28,7 +21,6 @@ public class DroneController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
-            playerScoreScript.increaseScore();
         }
         else if (collision.gameObject.CompareTag("Beacon"))
         {
