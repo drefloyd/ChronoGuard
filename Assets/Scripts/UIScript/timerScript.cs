@@ -6,6 +6,7 @@ public class timerScript : MonoBehaviour
     private float currentTime = 0.0f; // Start from 0
     public static bool isTimerRunning = false;
     public Text timerText;
+
     void Start()
     {
         isTimerRunning = true;

@@ -11,7 +11,7 @@ public class DroneSpawner : MonoBehaviour
     public Transform yellowSpawn;
 
     [SerializeField]
-    public float spawnInterval;
+    public static float spawnInterval = 1.8f;
     private float nextSpawnTime;
 
     private void Start()

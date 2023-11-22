@@ -10,7 +10,7 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor motor;
     private PlayerLook look;
-    private PlayerGun playerGun; 
+    private PlayerGuns playerGun; 
 
     void Awake()
     {
@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
         onFoot = playerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
-        playerGun = GetComponent<PlayerGun>();
+        playerGun = GetComponent<PlayerGuns>();
         
         onFoot.Shoot.performed += ctx => playerGun.shootBullet(); // when "shoot" action performed call this function
     }

@@ -5,20 +5,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-        // Start is called before the first frame update
         public void PlayGame()
     {
         Time.timeScale = 1f;
-
         pauseMenu.gameisPaused = false;
         timerScript.isTimerRunning = true;
+        scoreScript.playerScore = 0;
         SceneManager.LoadSceneAsync(1);
     }
     public void MainScreen()
     {
         Time.timeScale = 1f;
         timerScript.isTimerRunning = false;
+        waveScript.waveNumber = 1;
+        scoreScript.playerScore = 0;
         SceneManager.LoadSceneAsync(0);
-        
     }
 }
