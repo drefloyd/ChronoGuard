@@ -34,7 +34,8 @@ public class DroneController : MonoBehaviour
         {
             // also do explosion !!
             Debug.Log("drone died");
-            Destroy(gameObject);    
+            Destroy(gameObject);
+ 
         }
     }
 }
