@@ -485,9 +485,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 443445439150935077, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 596099489}
     - target: {fileID: 4134398848626692731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694919453777377370, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4694919453777377370, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9156810890430116489, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
