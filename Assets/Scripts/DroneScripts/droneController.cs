@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.XR;
 
 public class DroneController : MonoBehaviour
 {
+    public GameObject explosion;
     [SerializeField]
     public float droneSpeed;    // invader and guardian MUST have negaitves 
 
@@ -16,6 +17,7 @@ public class DroneController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Instantiate(explosion,collision.transform.position,Quaternion.identity);
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
