@@ -8,6 +8,7 @@ TagManager:
   - Drone
   - Bullet
   - Beacon
+  - Tower
   layers:
   - Default
   - TransparentFX

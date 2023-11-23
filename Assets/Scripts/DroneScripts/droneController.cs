@@ -37,5 +37,13 @@ public class DroneController : MonoBehaviour
             Destroy(gameObject);
  
         }
+
+        else if (collision.gameObject.CompareTag("Tower"))
+        {
+            // also do explosion !!
+            Debug.Log("drone died");
+            Destroy(gameObject);
+
+        }
     }
 }
