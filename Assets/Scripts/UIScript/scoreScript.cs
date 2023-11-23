@@ -25,10 +25,10 @@ public class scoreScript : MonoBehaviour
         if (playerScore == scoreThreshold)     // once player score reaches the score threshold
         {
             // forever change the speed of the drones
-            robotRockiePrefab.GetComponent<DroneController>().droneSpeed += 5f;
-            robotGuardianPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
-            robotInvaderPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
-
+            //robotRockiePrefab.GetComponent<DroneController>().droneSpeed += 5f;
+            //robotGuardianPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
+            //robotInvaderPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
+            DroneController.speed += 0.033f;
             scoreThreshold += 50;  // increase kill threshold by 5
 
            DroneSpawner.spawnInterval -= 0.03f; // make drones spawn faster

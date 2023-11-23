@@ -8,9 +8,9 @@ public class DroneController : MonoBehaviour
     public GameObject explosion;
 
     Renderer beaconToFollow;
-
+    public static float speed =0.1f;
     [SerializeField]
-    public float droneSpeed;    // invader and guardian MUST have negaitves 
+    public float droneSpeed;    // invader and guardian MUST have negaitves, we can remove this 
 
     scoreScript playerScoreScript;
 
@@ -45,7 +45,6 @@ public class DroneController : MonoBehaviour
         }
         else
         {
-            float speed = 0.1f;
             float X, Y, Z;
             if (GetComponent<Renderer>().bounds.center.x > beaconToFollow.bounds.center.x)
             {
