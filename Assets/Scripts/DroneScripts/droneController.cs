@@ -7,10 +7,8 @@ public class DroneController : MonoBehaviour
 {
     public GameObject explosion;
 
-    Renderer greenBeacon;
-    Renderer yellowBeacon;
-    Renderer purpleBeacon;
     Renderer beaconToFollow;
+
     [SerializeField]
     public float droneSpeed;    // invader and guardian MUST have negaitves 
 
@@ -19,58 +17,67 @@ public class DroneController : MonoBehaviour
     private void Start()
     {
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
-        greenBeacon = GameObject.Find("Piedras.005_Cubo.008_Mat_Piedra").GetComponent<Renderer>();
-        purpleBeacon = GameObject.Find("Piedras.007_Cubo.011_Mat_Piedra").GetComponent<Renderer>();
-        yellowBeacon = GameObject.Find("Piedras2_Cubo.017_Mat_Piedra").GetComponent<Renderer>();
-        int beaconChooser = Random.Range(0, 3);    // 0,1,2
+        ChooseRandomBeacon();
+    }
+
+    void ChooseRandomBeacon()
+    {
+        int beaconChooser = Random.Range(0, 3);    // 0, 1, 2
         if (beaconChooser == 0)
         {
-            beaconToFollow = greenBeacon;
+            beaconToFollow = GameObject.Find("Piedras.005_Cubo.008_Mat_Piedra").GetComponent<Renderer>();//green
         }
         else if (beaconChooser == 1)
         {
-            beaconToFollow = yellowBeacon;
+            beaconToFollow = GameObject.Find("Piedras.007_Cubo.011_Mat_Piedra").GetComponent<Renderer>();//purple
         }
         else
         {
-            beaconToFollow = purpleBeacon;
+            beaconToFollow = GameObject.Find("Piedras2_Cubo.017_Mat_Piedra").GetComponent<Renderer>();//yellow
         }
     }
 
     void Update()
     {
-        float speed = 0.1f;
-        float X, Y, Z;
-        if(GetComponent<Renderer>().bounds.center.x > beaconToFollow.bounds.center.x)
+        if (beaconToFollow == null)
         {
-            X =transform.position.x - speed;
+            ChooseRandomBeacon();
         }
         else
         {
-            X = transform.position.x + speed;
-        }
+            float speed = 0.1f;
+            float X, Y, Z;
+            if (GetComponent<Renderer>().bounds.center.x > beaconToFollow.bounds.center.x)
+            {
+                X = transform.position.x - speed;
+            }
+            else
+            {
+                X = transform.position.x + speed;
+            }
 
-        if (GetComponent<Renderer>().bounds.center.y > beaconToFollow.bounds.center.y)
-        {
-            Y = transform.position.y - speed;
-        }
-        else
-        {
-            Y = transform.position.y + speed;
-        }
+            if (GetComponent<Renderer>().bounds.center.y > beaconToFollow.bounds.center.y)
+            {
+                Y = transform.position.y - speed;
+            }
+            else
+            {
+                Y = transform.position.y + speed;
+            }
 
-        if (GetComponent<Renderer>().bounds.center.z > beaconToFollow.bounds.center.z)
-        {
-            Z =transform.position.z - speed;
-        }
-        else
-        {
-            Z = transform.position.z + speed;
-        }
-        
-        transform.position=new Vector3(X, Y, Z);
+            if (GetComponent<Renderer>().bounds.center.z > beaconToFollow.bounds.center.z)
+            {
+                Z = transform.position.z - speed;
+            }
+            else
+            {
+                Z = transform.position.z + speed;
+            }
 
+            transform.position = new Vector3(X, Y, Z);
+        }
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -78,14 +85,14 @@ public class DroneController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             playerScoreScript.increaseScore();
-            Destroy(gameObject);
+            
         }
         else if (collision.gameObject.CompareTag("Beacon"))
         {
             // also do explosion !!
             Debug.Log("drone died");
-            Destroy(gameObject);
- 
+         
         }
+        Destroy(gameObject);
     }
 }
