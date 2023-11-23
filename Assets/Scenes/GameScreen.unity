@@ -437,6 +437,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.4
@@ -500,6 +504,18 @@ PrefabInstance:
     - target: {fileID: 3588878511013802488, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3588878511013802488, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736380027702956343, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736380027702956343, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 832
       objectReference: {fileID: 0}
     - target: {fileID: 4134398848626692731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Layer
@@ -10275,7 +10291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3203124890177016857, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3203124890177016857, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
       propertyPath: m_LocalPosition.z
