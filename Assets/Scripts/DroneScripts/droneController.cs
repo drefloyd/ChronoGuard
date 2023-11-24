@@ -62,11 +62,11 @@ public class DroneController : MonoBehaviour
 
     void Update()
     {
-        if (beaconToFollow == null)
-        {
-            Vector3 target = ChooseRandomBeacon();
-            agent.SetDestination(target);
-        }
+        //if (beaconToFollow == null)
+        //{
+        //    Vector3 target = ChooseRandomBeacon();
+        //    agent.SetDestination(target);
+        //}
         //else
         //{
         //    float X, Y, Z;

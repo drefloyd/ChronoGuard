@@ -56,13 +56,16 @@ public class DroneSpawner : MonoBehaviour
         else
         {
             droneToSpawn = robotRockiePrefab;
+            rotationToUse = Quaternion.Euler(0f, 180f, 0f);
         }
 
         if (spawnChooser == 0)
         {
-            if (rotationToUse == null)
+            if (droneToSpawn == robotRockiePrefab)
             {
-                Instantiate(droneToSpawn, purpleSpawn.position, Quaternion.identity);
+                purpleSpawn.position += new Vector3(0f, 10f, 0f);   // invader and guardian spawn higher than neccessary
+                Instantiate(droneToSpawn, purpleSpawn.position, (Quaternion)rotationToUse);
+                purpleSpawn.position = purpleTempPosition;
             }
             else
             {
@@ -73,9 +76,11 @@ public class DroneSpawner : MonoBehaviour
         }
         else if(spawnChooser == 1)
         {
-            if (rotationToUse == null)
+            if (droneToSpawn == robotRockiePrefab)
             {
-                Instantiate(droneToSpawn, greenSpawn.position, Quaternion.identity);
+                greenSpawn.position += new Vector3(0f, 10f, 0f);
+                Instantiate(droneToSpawn, greenSpawn.position, (Quaternion)rotationToUse);
+                greenSpawn.position = greenTempPosition;
             }
             else
             {
@@ -86,9 +91,11 @@ public class DroneSpawner : MonoBehaviour
         }
         else
         {
-            if (rotationToUse == null)
+            if (droneToSpawn == robotRockiePrefab)
             {
-                Instantiate(droneToSpawn, yellowSpawn.position, Quaternion.identity);
+                yellowSpawn.position += new Vector3(0f, 10f, 0f);
+                Instantiate(droneToSpawn, yellowSpawn.position, (Quaternion)rotationToUse);
+                yellowSpawn.position = yellowTempPosition;
             }
             else
             {
