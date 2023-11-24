@@ -15,6 +15,8 @@ public class DroneController : MonoBehaviour
 
     scoreScript playerScoreScript;
 
+    public Vector3 target;
+
     private void Start()
     {
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
@@ -44,6 +46,8 @@ public class DroneController : MonoBehaviour
         {
             beaconToFollow = GameObject.Find("Tower").GetComponent<Renderer>();//tower
         }
+
+        target = new Vector3(beaconToFollow.bounds.center.x, beaconToFollow.bounds.center.y - 10, beaconToFollow.bounds.center.z);
     }
 
     void Update()
@@ -54,35 +58,7 @@ public class DroneController : MonoBehaviour
         }
         else
         {
-            float X, Y, Z;
-            if (GetComponent<Renderer>().bounds.center.x > beaconToFollow.bounds.center.x)
-            {
-                X = transform.position.x - speed;
-            }
-            else
-            {
-                X = transform.position.x + speed;
-            }
-
-            if (GetComponent<Renderer>().bounds.center.y > beaconToFollow.bounds.center.y)
-            {
-                Y = transform.position.y - speed;
-            }
-            else
-            {
-                Y = transform.position.y + speed;
-            }
-
-            if (GetComponent<Renderer>().bounds.center.z > beaconToFollow.bounds.center.z)
-            {
-                Z = transform.position.z - speed;
-            }
-            else
-            {
-                Z = transform.position.z + speed;
-            }
-
-            transform.position = new Vector3(X, Y, Z);
+            transform.position = Vector3.MoveTowards(transform.position, target, speed);
         }
     }
 
