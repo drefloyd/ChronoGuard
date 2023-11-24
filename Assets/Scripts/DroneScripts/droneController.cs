@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.XR;
+using UnityEngine.AI;
 
 public class DroneController : MonoBehaviour
 {
@@ -15,13 +16,22 @@ public class DroneController : MonoBehaviour
 
     scoreScript playerScoreScript;
 
+    public NavMeshAgent agent;
+    //public Transform target;
+
+
+    private void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
     private void Start()
     {
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
-        ChooseRandomBeacon();
+        Vector3 target = ChooseRandomBeacon();
+        agent.SetDestination(target);
     }
 
-    void ChooseRandomBeacon()
+    Vector3 ChooseRandomBeacon()
     {
         int beaconChooser = Random.Range(0, 4);    // 0, 1, 2, 3
 
@@ -31,6 +41,7 @@ public class DroneController : MonoBehaviour
         if (beaconChooser == 0)
         {
             beaconToFollow = GameObject.Find("Piedras.005_Cubo.008_Mat_Piedra").GetComponent<Renderer>();//green
+             
         }
         else if (beaconChooser == 1)
         {
@@ -44,46 +55,50 @@ public class DroneController : MonoBehaviour
         {
             beaconToFollow = GameObject.Find("Tower").GetComponent<Renderer>();//tower
         }
+
+        //return ther 3d position of the target object
+        return beaconToFollow.transform.position;
     }
 
     void Update()
     {
         if (beaconToFollow == null)
         {
-            ChooseRandomBeacon();
+            Vector3 target = ChooseRandomBeacon();
+            agent.SetDestination(target);
         }
-        else
-        {
-            float X, Y, Z;
-            if (GetComponent<Renderer>().bounds.center.x > beaconToFollow.bounds.center.x)
-            {
-                X = transform.position.x - speed;
-            }
-            else
-            {
-                X = transform.position.x + speed;
-            }
+        //else
+        //{
+        //    float X, Y, Z;
+        //    if (GetComponent<Renderer>().bounds.center.x > beaconToFollow.bounds.center.x)
+        //    {
+        //        X = transform.position.x - speed;
+        //    }
+        //    else
+        //    {
+        //        X = transform.position.x + speed;
+        //    }
 
-            if (GetComponent<Renderer>().bounds.center.y > beaconToFollow.bounds.center.y)
-            {
-                Y = transform.position.y - speed;
-            }
-            else
-            {
-                Y = transform.position.y + speed;
-            }
+        //    //if (GetComponent<Renderer>().bounds.center.y > beaconToFollow.bounds.center.y)
+        //    //{
+        //    //    Y = transform.position.y - speed;
+        //    //}
+        //    //else
+        //    //{
+        //    //    Y = transform.position.y + speed;
+        //    //}
 
-            if (GetComponent<Renderer>().bounds.center.z > beaconToFollow.bounds.center.z)
-            {
-                Z = transform.position.z - speed;
-            }
-            else
-            {
-                Z = transform.position.z + speed;
-            }
+        //    if (GetComponent<Renderer>().bounds.center.z > beaconToFollow.bounds.center.z)
+        //    {
+        //        Z = transform.position.z - speed;
+        //    }
+        //    else
+        //    {
+        //        Z = transform.position.z + speed;
+        //    }
 
-            transform.position = new Vector3(X, Y, Z);
-        }
+        //    transform.position = new Vector3(X, Y, Z);
+        //}
     }
 
 
