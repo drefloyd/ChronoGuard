@@ -9,9 +9,9 @@ public class DroneController : MonoBehaviour
     public GameObject NukePowerup;
 
     Renderer beaconToFollow;
-    public static float speed =0.1f;
-    [SerializeField]
-    public float droneSpeed;    // invader and guardian MUST have negaitves, we can remove this 
+    public static float speed = 0.15f;
+    //[SerializeField]
+    //public float droneSpeed;    // invader and guardian MUST have negaitves, we can remove this 
 
     scoreScript playerScoreScript;
 
@@ -94,18 +94,12 @@ public class DroneController : MonoBehaviour
         {
             playerScoreScript.increaseScore();
             //chance of spawning a powerUp nuke:
-            int num = Random.Range(1, 4);//1,2,3,4
+            int num = Random.Range(1, 5);//1,2,3,4,5
             if (num == 1)
             {
                 Instantiate(NukePowerup, GetComponent<Renderer>().bounds.center, Quaternion.identity);
             }
             
-        }
-        else if (collision.gameObject.CompareTag("Beacon"))
-        {
-            // also do explosion !!
-            Debug.Log("drone died");
-         
         }
         Destroy(gameObject);
     }

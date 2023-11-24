@@ -83,7 +83,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
@@ -228,6 +228,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3620414335270844390, guid: 9d72384100380405b835b8174d7f2cdd, type: 3}
+      propertyPath: m_Size.x
+      value: 4.1057076
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620414335270844390, guid: 9d72384100380405b835b8174d7f2cdd, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620414335270844390, guid: 9d72384100380405b835b8174d7f2cdd, type: 3}
+      propertyPath: m_Size.z
+      value: 4.4699993
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620414335270844390, guid: 9d72384100380405b835b8174d7f2cdd, type: 3}
+      propertyPath: m_Center.x
+      value: 2.9171467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3620414335270844390, guid: 9d72384100380405b835b8174d7f2cdd, type: 3}
+      propertyPath: m_Center.y
+      value: 0.6000001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -298,7 +318,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2284508238266117588, guid: ff61efa263cae824ba816b2bca5e1bb0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -327,6 +348,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3182282095999172201}
     m_Modifications:
+    - target: {fileID: 318801799019213083, guid: 47dd1eb8cbcc04c60b4eb311907c9d1c, type: 3}
+      propertyPath: m_Size.x
+      value: 3.1484072
+      objectReference: {fileID: 0}
+    - target: {fileID: 318801799019213083, guid: 47dd1eb8cbcc04c60b4eb311907c9d1c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.63230956
+      objectReference: {fileID: 0}
+    - target: {fileID: 318801799019213083, guid: 47dd1eb8cbcc04c60b4eb311907c9d1c, type: 3}
+      propertyPath: m_Size.z
+      value: 3.328208
+      objectReference: {fileID: 0}
+    - target: {fileID: 318801799019213083, guid: 47dd1eb8cbcc04c60b4eb311907c9d1c, type: 3}
+      propertyPath: m_Center.y
+      value: 0.32964087
+      objectReference: {fileID: 0}
     - target: {fileID: 5802933494532828942, guid: 47dd1eb8cbcc04c60b4eb311907c9d1c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9

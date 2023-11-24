@@ -28,10 +28,10 @@ public class scoreScript : MonoBehaviour
             //robotRockiePrefab.GetComponent<DroneController>().droneSpeed += 5f;
             //robotGuardianPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
             //robotInvaderPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
-            DroneController.speed += 0.033f;
+            DroneController.speed += 0.040f;    // increase drone speed each wave
             scoreThreshold += 50;  // increase kill threshold by 5
 
-           DroneSpawner.spawnInterval -= 0.03f; // make drones spawn faster
+           DroneSpawner.spawnInterval -= 0.03f; // make drones spawn faster each wave
 
            waveScript.increaseWave();
         }

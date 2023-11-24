@@ -122,7 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
   NukePowerup: {fileID: 2771538580509292206, guid: 3c94e69d4cbb77746bfc696091e49980, type: 3}
-  droneSpeed: 50
 --- !u!54 &7083478518056424868
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,7 +141,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1280
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
