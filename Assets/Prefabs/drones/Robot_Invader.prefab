@@ -99,7 +99,7 @@ MeshCollider:
     m_Bits: 512
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
+  NukePowerup: {fileID: 2771538580509292206, guid: 3c94e69d4cbb77746bfc696091e49980, type: 3}
   droneSpeed: -50
 --- !u!54 &5617418406351913319
 Rigidbody:
@@ -141,7 +142,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem.XR;
 public class DroneController : MonoBehaviour
 {
     public GameObject explosion;
+    public GameObject NukePowerup;
 
     Renderer beaconToFollow;
     public static float speed =0.1f;
@@ -92,6 +93,12 @@ public class DroneController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             playerScoreScript.increaseScore();
+            //chance of spawning a powerUp nuke:
+            int num = 1;//Random.Range(1, 4);//1,2,3,4
+            if (num == 1)
+            {
+                Instantiate(NukePowerup, GetComponent<Renderer>().bounds.center, Quaternion.identity);
+            }
             
         }
         else if (collision.gameObject.CompareTag("Beacon"))
