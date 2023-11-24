@@ -15,7 +15,14 @@ public class NukePowerUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            //kill all bots
+            //kill all drones
+            GameObject[] allDrones = GameObject.FindGameObjectsWithTag("Drone");
+
+            foreach (GameObject drone in allDrones)
+            {
+                Destroy(drone);
+                //maybe add the score for each or that might be too much
+            }
             Instantiate(explode, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

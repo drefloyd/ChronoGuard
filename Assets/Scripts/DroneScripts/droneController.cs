@@ -94,7 +94,7 @@ public class DroneController : MonoBehaviour
         {
             playerScoreScript.increaseScore();
             //chance of spawning a powerUp nuke:
-            int num = 1;//Random.Range(1, 4);//1,2,3,4
+            int num = Random.Range(1, 4);//1,2,3,4
             if (num == 1)
             {
                 Instantiate(NukePowerup, GetComponent<Renderer>().bounds.center, Quaternion.identity);

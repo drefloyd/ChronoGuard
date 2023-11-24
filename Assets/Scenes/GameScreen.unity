@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17316318, g: 0.16457182, b: 0.29665613, a: 1}
+  m_IndirectSpecularColor: {r: 0.17323539, g: 0.16459554, b: 0.2966911, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10164,6 +10164,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6701911876903677305, guid: 8016b5d29d0e7d147a5409508824f55a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701911876903677305, guid: 8016b5d29d0e7d147a5409508824f55a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701911876903677305, guid: 8016b5d29d0e7d147a5409508824f55a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7380060846690101156, guid: 8016b5d29d0e7d147a5409508824f55a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -10245,6 +10257,18 @@ PrefabInstance:
     - target: {fileID: 2215764635774404573, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638031103668803218, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638031103668803218, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638031103668803218, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5227424625641983343, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
       propertyPath: m_LocalPosition.x
