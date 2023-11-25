@@ -10,7 +10,9 @@ public class InputManager : MonoBehaviour
 
     private PlayerMotor motor;
     private PlayerLook look;
-    private PlayerGuns playerGun; 
+    private PlayerGuns playerGun;
+
+    public bool disabled = false;
 
     void Awake()
     {
@@ -25,11 +27,13 @@ public class InputManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+        if (!disabled)
+            motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
     }
     private void LateUpdate()
     {
-        look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
+        if (!disabled)
+            look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
     }
     private void OnEnable()
     {

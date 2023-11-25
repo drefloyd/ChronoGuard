@@ -32,9 +32,10 @@ public class PlayerMotor : MonoBehaviour
         
         playerVelocity.y += gravity * Time.deltaTime;
 
-        if (isGrounded == false && playerVelocity.y < 0) {
-            playerVelocity.y = -2f;
-    }
+        //if (isGrounded == false && playerVelocity.y < 0) 
+        //{
+        //    playerVelocity.y = -2f;
+        //}
             controller.Move(playerVelocity * Time.deltaTime);
     }
 }
