@@ -10,7 +10,7 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 playerVelocity;
     private bool isGrounded;
     public float speed = 5f;
-    public float gravity = -9.8f;   // gravity may or may not be needed
+    public float gravity = -5f;   // gravity may or may not be needed
 
     void Start()
     {
