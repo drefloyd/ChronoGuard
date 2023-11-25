@@ -10,7 +10,7 @@ public class PlayerMotor : MonoBehaviour
     private Vector3 playerVelocity;
     private bool isGrounded;
     public float speed = 5f;
-    public float gravity = -9.8f;   // gravity may or may not be needed
+    public float gravity = -5f;   // gravity may or may not be needed
 
     void Start()
     {
@@ -32,9 +32,10 @@ public class PlayerMotor : MonoBehaviour
         
         playerVelocity.y += gravity * Time.deltaTime;
 
-        if (isGrounded == false && playerVelocity.y < 0) {
-            playerVelocity.y = -2f;
-    }
+        //if (isGrounded == false && playerVelocity.y < 0) 
+        //{
+        //    playerVelocity.y = -2f;
+        //}
             controller.Move(playerVelocity * Time.deltaTime);
     }
 }

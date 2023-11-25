@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Beacon
   - powerUp
+  - Tower
   layers:
   - Default
   - TransparentFX
