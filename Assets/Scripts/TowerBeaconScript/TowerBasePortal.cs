@@ -56,10 +56,10 @@ public class TowerBasePortal : MonoBehaviour
                 float y = closestTower.GetComponent<Renderer>().bounds.extents.y;
 
                 //set the player's position to those coordinates, need to deactivate and reactivate it
-
-                manager = collision.gameObject.GetComponent<InputManager>();
+                player = GameObject.Find("Player");
+                manager = player.GetComponent<InputManager>();
                 teleportLocation = new Vector3(x, 40, z);   //hard code to height 40 because the bounds doesn't work for some reason
-                player = collision.gameObject;
+             
                 StartCoroutine("Teleport");
 
             }
