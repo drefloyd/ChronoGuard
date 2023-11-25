@@ -3914,7 +3914,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Name
-      value: Tower (1)
+      value: Tower1
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Layer
@@ -4568,7 +4568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Name
-      value: Tower (2)
+      value: Tower2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Layer
