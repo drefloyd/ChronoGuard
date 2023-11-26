@@ -3,9 +3,14 @@ using UnityEngine;
 using UnityEngine.UI;
 public class waveScript : MonoBehaviour
 {
-    public Text waveText;
+    public TextMeshProUGUI waveText;
 
     public static int waveNumber = 1;  // start at wave 1
+
+    void Awake()
+    {
+        waveText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
+    }
 
     void Start()
     {

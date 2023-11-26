@@ -1,16 +1,23 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class scoreScript : MonoBehaviour
 {
     public static float playerScore = 0;
     private float scorePerKill = 10;
-    public Text scoreText;
+    private TextMeshProUGUI scoreText;
 
     private static float scoreThreshold = 50;    // start at 5 kills to increase (5 kills == 50 points)
 
     public GameObject robotGuardianPrefab;
     public GameObject robotInvaderPrefab;
     public GameObject robotRockiePrefab;
+
+    void Awake()
+    {
+        scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
+    }
+
 
     void Start()
     {

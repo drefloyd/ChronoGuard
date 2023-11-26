@@ -5,7 +5,12 @@ public class timerScript : MonoBehaviour
 {
     private float currentTime = 0.0f; // Start from 0
     public static bool isTimerRunning = false;
-    public Text timerText;
+    public TextMeshProUGUI timerText;
+
+    void Awake()
+    {
+        timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
+    }
 
     void Start()
     {
