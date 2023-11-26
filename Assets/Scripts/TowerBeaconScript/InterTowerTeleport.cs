@@ -63,7 +63,7 @@ public class InterTowerTeleport : MonoBehaviour
                 player = GameObject.Find("Player");
                 manager = player.GetComponent<InputManager>();
                 //+1.5 so not too close to that tower's portal
-                teleportLocation = new Vector3(x + 1.5f, 40, z);   //hard code to height 40 because the bounds doesn't work for some reason
+                teleportLocation = new Vector3(x + 1.5f, 40, z + 1.5f);   //hard code to height 40 because the bounds doesn't work for some reason
 
                 StartCoroutine("Teleport");
 
