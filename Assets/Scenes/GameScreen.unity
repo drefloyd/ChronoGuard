@@ -3384,7 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d11370c7347b84c8187f2b697b5d75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveText: {fileID: 0}
+  waveText: {fileID: 736863110}
 --- !u!222 &736863109
 CanvasRenderer:
   m_ObjectHideFlags: 0
