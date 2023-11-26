@@ -25,7 +25,7 @@ public class DroneController : MonoBehaviour
 
     void ChooseRandomBeacon()
     {
-        int beaconChooser = Random.Range(0, 4);    // 0, 1, 2, 3
+        int beaconChooser = Random.Range(0, 6);    // 0, 1, 2, 3, 4, 5
 
         //test
         //beaconChooser = 3;
@@ -42,9 +42,18 @@ public class DroneController : MonoBehaviour
         {
             beaconToFollow = GameObject.Find("Piedras2_Cubo.017_Mat_Piedra").GetComponent<Renderer>();//yellow
         }
-        else
+        else if (beaconChooser == 3)
         {
             beaconToFollow = GameObject.Find("Tower").GetComponent<Renderer>();//tower
+        }
+
+        else if (beaconChooser == 4)
+        {
+            beaconToFollow = GameObject.Find("Tower1").GetComponent<Renderer>();//tower
+        }
+        else
+        {
+            beaconToFollow = GameObject.Find("Tower2").GetComponent<Renderer>();//tower
         }
 
         target = new Vector3(beaconToFollow.bounds.center.x, beaconToFollow.bounds.center.y - 10, beaconToFollow.bounds.center.z);
