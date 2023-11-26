@@ -12,7 +12,7 @@ public class PlayerGuns : MonoBehaviour
     public GameObject leftBulletPrefab;
 
     public LayerMask invisBarriers;
-    private float bulletSpeed = 18500f;   
+    private float bulletSpeed = 20000f;   
     public Camera PlayerCam;
 
     private float shootTime = 0f;

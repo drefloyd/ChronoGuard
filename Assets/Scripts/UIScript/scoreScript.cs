@@ -18,7 +18,6 @@ public class scoreScript : MonoBehaviour
         scoreText = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
     }
 
-
     void Start()
     {
         scoreText.text = ("Score:0");
@@ -35,7 +34,7 @@ public class scoreScript : MonoBehaviour
             //robotRockiePrefab.GetComponent<DroneController>().droneSpeed += 5f;
             //robotGuardianPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
             //robotInvaderPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
-            DroneController.speed += 0.040f;    // increase drone speed each wave
+            DroneController.speed += 0.1f;    // increase drone speed each wave
             scoreThreshold += 50;  // increase kill threshold by 5
 
            DroneSpawner.spawnInterval -= 0.03f; // make drones spawn faster each wave
