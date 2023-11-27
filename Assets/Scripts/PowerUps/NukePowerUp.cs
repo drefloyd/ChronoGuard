@@ -7,10 +7,14 @@ public class NukePowerUp : MonoBehaviour
     // Start is called before the first frame update
     public GameObject explode;
     scoreScript playerScoreScript;
+    AudioManager audioManager;
+
     void Start()
     {
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
         Destroy(gameObject, 3);//only lasts 3 seconds
+        audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,6 +32,7 @@ public class NukePowerUp : MonoBehaviour
             }
             Instantiate(explode, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            audioManager.PlaySFX(audioManager.explosion);
         }
     }
 }

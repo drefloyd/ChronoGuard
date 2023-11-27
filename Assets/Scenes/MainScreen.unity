@@ -1428,8 +1428,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -917, y: 368}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: -237.6, y: 361.8}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839680144
 MonoBehaviour:
@@ -3729,7 +3729,7 @@ MonoBehaviour:
   SFXSource: {fileID: 1954172716}
   bullet: {fileID: 0}
   moveSound: {fileID: 0}
-  gunshotSound: {fileID: 0}
+  Teleport: {fileID: 0}
   explosion: {fileID: 0}
   powerUpPickup: {fileID: 0}
   TowertakeDamage: {fileID: 0}
@@ -3970,6 +3970,10 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8943447846243100788, guid: 05b58c71cb93f3d4b842796be9a0a4e2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4299026adf2124a47aec7debbad4804a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

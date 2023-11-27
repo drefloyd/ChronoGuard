@@ -13,6 +13,7 @@ public class InputManager : MonoBehaviour
     private PlayerGuns playerGun;
 
     public bool disabled = false;
+    AudioManager audioManager;
 
     void Awake()
     {
@@ -21,7 +22,7 @@ public class InputManager : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
         look = GetComponent<PlayerLook>();
         playerGun = GetComponent<PlayerGuns>();
-        
+        audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         onFoot.Shoot.performed += ctx => playerGun.shootBullet(); // when "shoot" action performed call this function
     }
 
@@ -29,6 +30,7 @@ public class InputManager : MonoBehaviour
     {
         if (!disabled)
             motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
+
     }
     private void LateUpdate()
     {

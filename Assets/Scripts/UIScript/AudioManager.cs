@@ -9,10 +9,12 @@ public class AudioManager : MonoBehaviour
     [Header("-------Audio Clip---------")]
     public AudioClip bullet;
     public AudioClip moveSound;
-    public AudioClip gunshotSound;
+    public AudioClip Teleport;
     public AudioClip explosion;
-    public AudioClip powerUpPickup;
+    public AudioClip GameOver;
     public AudioClip TowertakeDamage;
+    public AudioClip Playermove;
+
     public void PlaySFX(AudioClip clip)
     {
         SFXSource.PlayOneShot(clip,20);

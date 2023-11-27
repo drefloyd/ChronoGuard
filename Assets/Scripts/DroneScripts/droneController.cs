@@ -16,11 +16,15 @@ public class DroneController : MonoBehaviour
     scoreScript playerScoreScript;
 
     public Vector3 target;
+    AudioManager audioManager;
 
     private void Start()
     {
+        audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
         ChooseRandomBeacon();
+
+
     }
 
     void ChooseRandomBeacon()
@@ -64,10 +68,12 @@ public class DroneController : MonoBehaviour
         if (beaconToFollow == null)
         {
             ChooseRandomBeacon();
+
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed);
+
         }
     }
 
@@ -87,5 +93,7 @@ public class DroneController : MonoBehaviour
             
         }
         Destroy(gameObject);
+        audioManager.PlaySFX(audioManager.TowertakeDamage);
+
     }
 }

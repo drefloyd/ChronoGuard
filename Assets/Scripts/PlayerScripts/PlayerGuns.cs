@@ -24,6 +24,7 @@ public class PlayerGuns : MonoBehaviour
 
     private Vector3 leftGunOrigPos;
     private Vector3 rightGunOrigPos;
+    AudioManager audioManager;
 
 
     private void Start()
@@ -31,12 +32,16 @@ public class PlayerGuns : MonoBehaviour
         // Store the original position of the guns.
         rightGunOrigPos = GameObject.Find("rightGun").GetComponent<Transform>().localPosition;
         leftGunOrigPos = GameObject.Find("leftGun").GetComponent<Transform>().localPosition;
+        audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+
     }
 
     public void shootBullet()
     {
         if (shootRightGunNext == true)
         {
+            audioManager.PlaySFX(audioManager.bullet);
+
             if (Time.time > canShootDelay + shootTime)      // shoot right gun
             {
                 shootTime = Time.time;
@@ -74,6 +79,7 @@ public class PlayerGuns : MonoBehaviour
         {       
             if (Time.time > canShootDelay + shootTime)  // shoot left gun
             {
+                audioManager.PlaySFX(audioManager.bullet);
                 shootTime = Time.time;
                 RaycastHit theHit;
                 if (Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out theHit, Mathf.Infinity, ~invisBarriers))

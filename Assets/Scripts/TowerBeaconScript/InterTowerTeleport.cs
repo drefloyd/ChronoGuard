@@ -12,10 +12,13 @@ public class InterTowerTeleport : MonoBehaviour
     InputManager manager;
 
     GameObject[] towers; //create initial list of towers at start
+    AudioManager audioManager;
 
     private void Awake()
     {
          towers = GameObject.FindGameObjectsWithTag("Tower");
+        audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+
     }
 
     /// <summary>
@@ -64,7 +67,7 @@ public class InterTowerTeleport : MonoBehaviour
                 manager = player.GetComponent<InputManager>();
                 //+1.5 so not too close to that tower's portal
                 teleportLocation = new Vector3(x + 1.5f, 40, z + 1.5f);   //hard code to height 40 because the bounds doesn't work for some reason
-
+                audioManager.PlaySFX(audioManager.Teleport);
                 StartCoroutine("Teleport");
 
             }
