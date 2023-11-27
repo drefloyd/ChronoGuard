@@ -48,16 +48,15 @@ public class DroneController : MonoBehaviour
         }
         else if (beaconChooser == 3)
         {
-            beaconToFollow = GameObject.Find("Tower").GetComponent<Renderer>();//tower
+            beaconToFollow = GameObject.Find("LeftTower").GetComponent<Renderer>();//tower
         }
-
         else if (beaconChooser == 4)
         {
-            beaconToFollow = GameObject.Find("Tower1").GetComponent<Renderer>();//tower
+            beaconToFollow = GameObject.Find("MiddleTower").GetComponent<Renderer>();//tower
         }
         else
         {
-            beaconToFollow = GameObject.Find("Tower2").GetComponent<Renderer>();//tower
+            beaconToFollow = GameObject.Find("RightTower").GetComponent<Renderer>();//tower
         }
 
         target = new Vector3(beaconToFollow.bounds.center.x, beaconToFollow.bounds.center.y - 10, beaconToFollow.bounds.center.z);
@@ -94,6 +93,5 @@ public class DroneController : MonoBehaviour
         }
         Destroy(gameObject);
         audioManager.PlaySFX(audioManager.TowertakeDamage);
-
     }
 }

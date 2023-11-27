@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NukePowerUp : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject explode;
     scoreScript playerScoreScript;
     AudioManager audioManager;
@@ -14,7 +13,6 @@ public class NukePowerUp : MonoBehaviour
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
         Destroy(gameObject, 3);//only lasts 3 seconds
         audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-
     }
 
     private void OnCollisionEnter(Collision collision)
