@@ -16,7 +16,7 @@ public class InterTowerTeleport : MonoBehaviour
 
     private void Awake()
     {
-         towers = GameObject.FindGameObjectsWithTag("Tower");
+        towers = GameObject.FindGameObjectsWithTag("Tower");
         audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
 
     }
@@ -27,6 +27,10 @@ public class InterTowerTeleport : MonoBehaviour
     /// <param name="collision"></param>
     private void OnCollisionEnter(Collision collision)
     {
+        towers = GameObject.FindGameObjectsWithTag("Tower"); //Update tower list in case one was removed
+
+        if (towers.Length <= 1) return; //if only one tower left, don't teleport
+
         if (collision.gameObject.CompareTag("Player"))
         {
             //Get the coordinates for the top of the current tower i.e. the nearest one if there are multiple
