@@ -13,10 +13,13 @@ public class BeaconScript : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
 
+    AudioManager audioManager;
+
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -25,6 +28,7 @@ public class BeaconScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Drone"))
         {
             TakeDamage(1);
+            audioManager.PlaySFX(audioManager.TowertakeDamage);
         }
 
     }

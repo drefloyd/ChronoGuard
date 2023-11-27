@@ -23,16 +23,11 @@ public class DroneController : MonoBehaviour
         audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         playerScoreScript = GameObject.Find("Score").GetComponent<scoreScript>();
         ChooseRandomBeacon();
-
-
     }
 
     void ChooseRandomBeacon()
     {
         int beaconChooser = Random.Range(0, 6);    // 0, 1, 2, 3, 4, 5
-
-        //test
-        //beaconChooser = 3;
 
         if (beaconChooser == 0)
         {
@@ -67,12 +62,10 @@ public class DroneController : MonoBehaviour
         if (beaconToFollow == null)
         {
             ChooseRandomBeacon();
-
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, target, speed);
-
         }
     }
 
@@ -92,6 +85,6 @@ public class DroneController : MonoBehaviour
             
         }
         Destroy(gameObject);
-        audioManager.PlaySFX(audioManager.TowertakeDamage);
+        //audioManager.PlaySFX(audioManager.TowertakeDamage);  // change this to a unique drone death sound
     }
 }

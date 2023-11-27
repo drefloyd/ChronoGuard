@@ -19,6 +19,8 @@ public class NukePowerUp : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("Crystal has been shot!");
+
             //kill all drones
             GameObject[] allDrones = GameObject.FindGameObjectsWithTag("Drone");
 

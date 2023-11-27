@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
-  NukePowerup: {fileID: 2771538580509292206, guid: 3c94e69d4cbb77746bfc696091e49980, type: 3}
+  NukePowerup: {fileID: 5757911417732344, guid: d5620069137e54139bb4d227e624590d, type: 3}
+  target: {x: 0, y: 0, z: 0}
 --- !u!54 &7083478518056424868
 Rigidbody:
   m_ObjectHideFlags: 0
