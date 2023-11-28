@@ -17,7 +17,7 @@ public class BeaconScript : MonoBehaviour
 
     void Start()
     {
-        if (gameObject.CompareTag("tower"))
+        if (gameObject.CompareTag("Tower"))
         {
             maxHealth = 5;
         }
