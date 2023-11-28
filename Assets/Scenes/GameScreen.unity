@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17316318, g: 0.16457182, b: 0.29665613, a: 1}
+  m_IndirectSpecularColor: {r: 0.17323539, g: 0.16459554, b: 0.2966911, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -582,6 +582,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5107096881842766481, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: teleportEffect
+      value: 
+      objectReference: {fileID: 7053385775836331393, guid: 354b6251e950209409c75ab984acf000, type: 3}
     - target: {fileID: 5476152374935561751, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -4279,6 +4283,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5107096881842766481, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: teleportEffect
+      value: 
+      objectReference: {fileID: 7053385775836331393, guid: 354b6251e950209409c75ab984acf000, type: 3}
     - target: {fileID: 5476152374935561751, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -5010,6 +5018,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5107096881842766481, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: teleportEffect
+      value: 
+      objectReference: {fileID: 7053385775836331393, guid: 354b6251e950209409c75ab984acf000, type: 3}
     - target: {fileID: 5476152374935561751, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 1

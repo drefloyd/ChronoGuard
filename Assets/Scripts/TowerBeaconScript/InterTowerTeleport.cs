@@ -8,6 +8,7 @@ public class InterTowerTeleport : MonoBehaviour
     public PlayerInput input;
     Vector3 teleportLocation;
     GameObject player;
+    public GameObject teleportEffect;
 
     InputManager manager;
 
@@ -72,6 +73,7 @@ public class InterTowerTeleport : MonoBehaviour
                 //+1.5 so not too close to that tower's portal
                 teleportLocation = new Vector3(x + 1.5f, 40, z + 1.5f);   //hard code to height 40 because the bounds doesn't work for some reason
                 audioManager.PlaySFX(audioManager.Teleport);
+                Instantiate(teleportEffect, new Vector3(x + 1.5f, 31.5f, z + 1.5f)  , Quaternion.identity);
                 StartCoroutine("Teleport");
 
             }
