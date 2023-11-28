@@ -9,14 +9,22 @@ using System;
 
 public class BeaconScript : MonoBehaviour
 {
-    public int maxHealth = 10;
-    public int currentHealth;
+    private int maxHealth;
+    private int currentHealth;
     public HealthBar healthBar;
 
     AudioManager audioManager;
 
     void Start()
     {
+        if (gameObject.CompareTag("tower"))
+        {
+            maxHealth = 5;
+        }
+        else
+        {
+            maxHealth = 5;
+        }
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
@@ -30,7 +38,6 @@ public class BeaconScript : MonoBehaviour
             TakeDamage(1);
             audioManager.PlaySFX(audioManager.TowertakeDamage);
         }
-
     }
 
     private void TakeDamage(int damage)
@@ -43,6 +50,4 @@ public class BeaconScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
 }

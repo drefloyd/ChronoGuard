@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
         pauseMenu.gameisPaused = false;
         timerScript.isTimerRunning = true;
         scoreScript.playerScore = 0;
+        scoreScript.resetDroneStats();
         SceneManager.LoadSceneAsync(1);
     }
     public void MainScreen()

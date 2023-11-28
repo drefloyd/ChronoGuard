@@ -42,4 +42,10 @@ public class scoreScript : MonoBehaviour
            waveScript.increaseWave();
         }
     }
+
+    public static void resetDroneStats()
+    {
+        DroneController.speed = .15f;    
+        DroneSpawner.spawnInterval = 1.8f;
+    }
 }

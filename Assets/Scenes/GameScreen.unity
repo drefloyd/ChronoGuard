@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17323539, g: 0.16459554, b: 0.2966911, a: 1}
+  m_IndirectSpecularColor: {r: 0.17316318, g: 0.16457182, b: 0.29665613, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -512,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1309256024102112268, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
@@ -4213,7 +4213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1309256024102112268, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
@@ -4948,7 +4948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: maxHealth
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1309256024102112268, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
@@ -13137,9 +13137,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1348643197869586430, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2856945672532510072, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
       propertyPath: m_Name
       value: rightGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856945672532510072, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3203124890177016857, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3203124890177016857, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
       propertyPath: m_LocalPosition.x
