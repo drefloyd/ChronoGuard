@@ -1899,6 +1899,7 @@ MonoBehaviour:
   explosion: {fileID: 8300000, guid: de1835ccf13f7d34cb1756ce181f4259, type: 3}
   GameOver: {fileID: 8300000, guid: a310b373b928ff34a8b317f0116906cb, type: 3}
   TowertakeDamage: {fileID: 0}
+  DroneDamage: {fileID: 0}
   Playermove: {fileID: 0}
 --- !u!1001 &1622148657
 PrefabInstance:
@@ -2874,6 +2875,10 @@ PrefabInstance:
     - target: {fileID: 1991588394050926387, guid: 325126c0617cd6545abadd0dd190b31e, type: 3}
       propertyPath: m_RaycastTarget
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803538128490408034, guid: 325126c0617cd6545abadd0dd190b31e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 3769054360545119275, guid: 325126c0617cd6545abadd0dd190b31e, type: 3}
       propertyPath: m_fontSize

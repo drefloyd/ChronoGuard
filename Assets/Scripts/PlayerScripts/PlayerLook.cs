@@ -13,16 +13,19 @@ public class PlayerLook : MonoBehaviour
 
     public void ProcessLook(Vector2 input)
     {
-        float mouseX = input.x;
-        float mouseY = input.y;
+        if (pauseMenu.gameisPaused==false)
+        {
+            float mouseX = input.x;
+            float mouseY = input.y;
 
-        // Calculates camera rotation
-        xRotation -= (mouseY * Time.deltaTime) * ySensitivity;
-        xRotation = Mathf.Clamp(xRotation, -80f, 80f);
+            // Calculates camera rotation
+            xRotation -= (mouseY * Time.deltaTime) * ySensitivity;
+            xRotation = Mathf.Clamp(xRotation, -80f, 80f);
 
-        Camera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            Camera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // roatate player to look left/right
-        transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
+            // roatate player to look left/right
+            transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
+        }
     }
 }

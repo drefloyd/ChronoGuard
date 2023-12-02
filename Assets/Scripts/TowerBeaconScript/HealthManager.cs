@@ -25,5 +25,38 @@ public class HealthManager : MonoBehaviour
             audioManager.PlaySFX(audioManager.GameOver);
 
         }
+        else if (InterTowerTeleport.towerposition==3&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        {
+            timerScript.isTimerRunning=false;
+            // All objects are destroyed, transition to the next scene
+            SceneManager.LoadScene(2);
+            audioManager.PlaySFX(audioManager.GameOver);
+
+        }
+        else if (InterTowerTeleport.towerposition==2&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        {
+            timerScript.isTimerRunning=false;
+            // All objects are destroyed, transition to the next scene
+            SceneManager.LoadScene(2);
+            audioManager.PlaySFX(audioManager.GameOver);
+
+        }
+        else if (InterTowerTeleport.towerposition==1&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        {
+            timerScript.isTimerRunning=false;
+
+            // All objects are destroyed, transition to the next scene
+            SceneManager.LoadScene(2);
+            audioManager.PlaySFX(audioManager.GameOver);
+
+        }
+        else if (InterTowerTeleport.towerposition==0&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        {
+            timerScript.isTimerRunning=false;
+            // All objects are destroyed, transition to the next scene
+            SceneManager.LoadScene(2);
+            audioManager.PlaySFX(audioManager.GameOver);
+
+        }
     }
 }

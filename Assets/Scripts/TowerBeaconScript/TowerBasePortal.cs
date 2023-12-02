@@ -9,7 +9,8 @@ public class TowerBasePortal : MonoBehaviour
     public PlayerInput input;
     Vector3 teleportLocation;
     GameObject player;
-
+    public int playerposition;
+    public static GameObject towerposition;
     InputManager manager;
 
     //private void Awake()
@@ -33,6 +34,7 @@ public class TowerBasePortal : MonoBehaviour
                 if (closestTower == null)
                 {
                     closestTower = tower;
+                    towerposition=closestTower;
                 }
                 else
                 {
@@ -42,6 +44,7 @@ public class TowerBasePortal : MonoBehaviour
                     if (distanceToThisTower < distanceToCurrentClosestTower)
                     {
                         closestTower = tower;
+
                     }
                 }
                 
@@ -54,7 +57,6 @@ public class TowerBasePortal : MonoBehaviour
                 float z = closestTower.GetComponent<Renderer>().bounds.center.z;
 
                 float y = closestTower.GetComponent<Renderer>().bounds.extents.y;
-
                 //set the player's position to those coordinates, need to deactivate and reactivate it
                 player = GameObject.Find("Player");
                 manager = player.GetComponent<InputManager>();

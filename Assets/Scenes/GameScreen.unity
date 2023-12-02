@@ -566,6 +566,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4134398848626692731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_TagString
+      value: TowerTop
+      objectReference: {fileID: 0}
     - target: {fileID: 4421651331736642574, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -1490,7 +1494,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180.75003, y: 306.00006}
+  m_AnchoredPosition: {x: 180.75003, y: 223}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223974232
@@ -3677,7 +3681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 267.5, y: 266.99994}
+  m_AnchoredPosition: {x: 267.5, y: 195}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782628377
@@ -3745,8 +3749,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4401,6 +4405,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4134398848626692731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_TagString
+      value: TowerTop
+      objectReference: {fileID: 0}
     - target: {fileID: 4421651331736642574, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -4831,7 +4839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.75, y: 253.00021}
+  m_AnchoredPosition: {x: 299.2, y: 240}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993504932
@@ -5154,6 +5162,10 @@ PrefabInstance:
     - target: {fileID: 4134398848626692731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4134398848626692731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: m_TagString
+      value: TowerTop
       objectReference: {fileID: 0}
     - target: {fileID: 4421651331736642574, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
@@ -10967,6 +10979,7 @@ MonoBehaviour:
   explosion: {fileID: 8300000, guid: de1835ccf13f7d34cb1756ce181f4259, type: 3}
   GameOver: {fileID: 8300000, guid: 44d1028962eae8f4b9b1e28ebc6b3ce4, type: 3}
   TowertakeDamage: {fileID: 8300000, guid: 1c82b2bce3cdccd4fb754769436c7a04, type: 3}
+  DroneDamage: {fileID: 8300000, guid: 37a57612d59a18348ae37627cb5c999f, type: 3}
   Playermove: {fileID: 0}
 --- !u!1 &1481676873
 GameObject:
@@ -13951,8 +13964,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 705507995}
   - {fileID: 4610239657695054793}
+  - {fileID: 20153557}
   - {fileID: 1481676874}
   - {fileID: 168852472}
   - {fileID: 453130197}
   - {fileID: 1993604283}
-  - {fileID: 20153557}

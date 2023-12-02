@@ -19,11 +19,11 @@ public class BeaconScript : MonoBehaviour
     {
         if (gameObject.CompareTag("Tower"))
         {
-            maxHealth = 5;
+            maxHealth = 2;
         }
         else
         {
-            maxHealth = 5;
+            maxHealth = 2;
         }
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);

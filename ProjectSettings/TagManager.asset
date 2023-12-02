@@ -11,6 +11,7 @@ TagManager:
   - powerUp
   - Tower
   - AudioManager
+  - TowerTop
   layers:
   - Default
   - TransparentFX
