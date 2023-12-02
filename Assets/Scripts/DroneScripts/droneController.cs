@@ -82,9 +82,14 @@ public class DroneController : MonoBehaviour
             {
                 Instantiate(NukePowerup, GetComponent<Renderer>().bounds.center, Quaternion.identity);
             }
-            
+            audioManager.PlaySFX(audioManager.DroneDamage);
         }
-        Destroy(gameObject);
-        //audioManager.PlaySFX(audioManager.TowertakeDamage);  // change this to a unique drone death sound
+        else if (collision.gameObject.CompareTag("Tower"))
+        {
+            audioManager.PlaySFX(audioManager.TowertakeDamage);
+        }
+
+            Destroy(gameObject);
+        //  // change this to a unique drone death sound
     }
 }

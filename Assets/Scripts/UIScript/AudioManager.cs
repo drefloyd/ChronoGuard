@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip explosion;
     public AudioClip GameOver;
     public AudioClip TowertakeDamage;
+    public AudioClip DroneDamage;
     public AudioClip Playermove;
 
     public void PlaySFX(AudioClip clip)
