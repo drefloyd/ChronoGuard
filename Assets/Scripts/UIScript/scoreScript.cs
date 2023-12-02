@@ -7,7 +7,7 @@ public class scoreScript : MonoBehaviour
     private float scorePerKill = 10;
     private TextMeshProUGUI scoreText;
 
-    private static float scoreThreshold = 50;    // start at 5 kills to increase (5 kills == 50 points)
+    public static float scoreThreshold = 50;    // start at 5 kills to increase (5 kills == 50 points)
 
     public GameObject robotGuardianPrefab;
     public GameObject robotInvaderPrefab;
@@ -22,6 +22,7 @@ public class scoreScript : MonoBehaviour
     {
         scoreText.text = ("Score:0");
         playerScore = 0;
+        scoreThreshold = 50;
     }
     public void increaseScore()
     {
@@ -30,10 +31,6 @@ public class scoreScript : MonoBehaviour
 
         if (playerScore == scoreThreshold)     // once player score reaches the score threshold
         {
-            // forever change the speed of the drones
-            //robotRockiePrefab.GetComponent<DroneController>().droneSpeed += 5f;
-            //robotGuardianPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
-            //robotInvaderPrefab.GetComponent<DroneController>().droneSpeed -= 5f;
             DroneController.speed += 0.1f;    // increase drone speed each wave
             scoreThreshold += 50;  // increase kill threshold by 5
 

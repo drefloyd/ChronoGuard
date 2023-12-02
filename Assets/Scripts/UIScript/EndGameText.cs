@@ -20,5 +20,4 @@ public class EndGameText : MonoBehaviour
         scoreText.text = scoreScript.playerScore.ToString();
         timeText.text = timerScript.stopTime.ToString("F1");
     }
-
 }

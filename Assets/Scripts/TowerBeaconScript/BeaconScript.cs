@@ -46,20 +46,14 @@ public class BeaconScript : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
 
-
-
         if (currentHealth<=0)
         {
             Destroy(gameObject);
         }
-
     }
     public int GetCurrentHealth()
     {
-       
-
         //Debug.Log("Current Health: " + currentHealth);
-
         return currentHealth;
     }
 
