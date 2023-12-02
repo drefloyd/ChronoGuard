@@ -387,7 +387,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 952580311}
+  optionUI: {fileID: 520909180}
+  controlUI: {fileID: 32664137}
+  controlButton: {fileID: 90508670}
   PlayerUI: {fileID: 513982308}
+  optionButton: {fileID: 1746100226}
+  selectedSprite: {fileID: 21300016, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
+  highlightedSprite: {fileID: 21300024, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
+  disabledSprite: {fileID: 21300014, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
 --- !u!114 &20153559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +507,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1415177464746251647, guid: 325126c0617cd6545abadd0dd190b31e, type: 3}
     - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: script1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: towerTag
       value: Tower1
       objectReference: {fileID: 0}
@@ -515,6 +526,18 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject
+      value: 
+      objectReference: {fileID: 638120191}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject2
+      value: 
+      objectReference: {fileID: 1030947110}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject3
+      value: 
+      objectReference: {fileID: 380492133}
     - target: {fileID: 1309256024102112268, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -797,8 +820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 26}
-  m_SizeDelta: {x: -1264.9233, y: -319.2593}
+  m_AnchoredPosition: {x: 0, y: -61.594}
+  m_SizeDelta: {x: -1264.9233, y: -465.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &40919614
 PrefabInstance:
@@ -1018,7 +1041,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300024, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
     m_PressedSprite: {fileID: 21300016, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
     m_SelectedSprite: {fileID: 21300016, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
-    m_DisabledSprite: {fileID: 21300024, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
+    m_DisabledSprite: {fileID: 21300014, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1127,7 +1150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 271, y: 163}
+  m_AnchoredPosition: {x: 271, y: 132}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105246353
@@ -1491,7 +1514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180.75003, y: 306.00006}
+  m_AnchoredPosition: {x: 180.75003, y: 254}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223974232
@@ -2133,6 +2156,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c7d057cba585641bb68312c10d7791, type: 3}
+--- !u!1 &380492133 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+  m_PrefabInstance: {fileID: 1034819836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &380665831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2196,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 892, y: -838}
+  m_AnchoredPosition: {x: 892, y: -845}
   m_SizeDelta: {x: 215.113, y: 25.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380665833
@@ -2843,8 +2871,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -1264.9233, y: -431.9489}
+  m_AnchoredPosition: {x: 0, y: 30}
+  m_SizeDelta: {x: -1264.9233, y: -701.2561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520909182
 MonoBehaviour:
@@ -3069,6 +3097,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerTag: Tower
   beaconTag: Beacon
+  healthObject: {fileID: 638120191}
+  healthObject2: {fileID: 1030947110}
+  healthObject3: {fileID: 380492133}
 --- !u!4 &596099489 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7250397841633798519, guid: 635b43ae0eaee3f4e83999720c46654e, type: 3}
@@ -3189,6 +3220,11 @@ RectTransform:
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8173138530764546806, guid: 2769f0625c97f6d4bafaaa07ce3d5a36, type: 3}
   m_PrefabInstance: {fileID: 614921387}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &638120191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+  m_PrefabInstance: {fileID: 866436364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
@@ -3835,7 +3871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 267.5, y: 266.99994}
+  m_AnchoredPosition: {x: 267.5, y: 234}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782628377
@@ -4492,6 +4528,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1415177464746251647, guid: 325126c0617cd6545abadd0dd190b31e, type: 3}
     - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: script1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: towerTag
       value: Tower2
       objectReference: {fileID: 0}
@@ -4507,6 +4547,18 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject
+      value: 
+      objectReference: {fileID: 638120191}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject2
+      value: 
+      objectReference: {fileID: 1030947110}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject3
+      value: 
+      objectReference: {fileID: 380492133}
     - target: {fileID: 1309256024102112268, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -4919,8 +4971,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -876.3041, y: -263.9196}
+  m_AnchoredPosition: {x: 18, y: -27}
+  m_SizeDelta: {x: -1547.2266, y: -486.7184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &990545038 stripped
 GameObject:
@@ -4989,7 +5041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.75, y: 253.00021}
+  m_AnchoredPosition: {x: 289, y: 253.00021}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993504932
@@ -5173,6 +5225,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1023397643}
   m_CullTransparentMesh: 1
+--- !u!1 &1030947110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+  m_PrefabInstance: {fileID: 20465154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1034819836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5246,6 +5303,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1415177464746251647, guid: 325126c0617cd6545abadd0dd190b31e, type: 3}
     - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: script1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: towerTag
       value: Tower3
       objectReference: {fileID: 0}
@@ -5261,6 +5322,18 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject
+      value: 
+      objectReference: {fileID: 638120191}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject2
+      value: 
+      objectReference: {fileID: 1030947110}
+    - target: {fileID: 1038823822730753731, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
+      propertyPath: healthObject3
+      value: 
+      objectReference: {fileID: 380492133}
     - target: {fileID: 1309256024102112268, guid: dfcbb10d2c93993479b819f9f6977b51, type: 3}
       propertyPath: m_Convex
       value: 0
@@ -11125,7 +11198,7 @@ MonoBehaviour:
   explosion: {fileID: 8300000, guid: de1835ccf13f7d34cb1756ce181f4259, type: 3}
   GameOver: {fileID: 8300000, guid: 44d1028962eae8f4b9b1e28ebc6b3ce4, type: 3}
   TowertakeDamage: {fileID: 8300000, guid: 1c82b2bce3cdccd4fb754769436c7a04, type: 3}
-  DroneDamage: {fileID: 0}
+  DroneDamage: {fileID: 8300000, guid: 37a57612d59a18348ae37627cb5c999f, type: 3}
   Playermove: {fileID: 0}
 --- !u!1 &1481676873
 GameObject:
@@ -12191,7 +12264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: -1
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -12210,7 +12283,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 21300024, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
     m_PressedSprite: {fileID: 21300016, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
     m_SelectedSprite: {fileID: 21300016, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
-    m_DisabledSprite: {fileID: 21300024, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
+    m_DisabledSprite: {fileID: 21300014, guid: 56d84991286850f428b4e7df0cca7380, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -12222,10 +12295,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 952580311}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 20153558}
+        m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
+        m_MethodName: Option
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12233,18 +12306,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 520909180}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1746100227
 MonoBehaviour:
@@ -13263,6 +13324,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 842062298}
     m_Modifications:
+    - target: {fileID: -1425149043742715138, guid: 8016b5d29d0e7d147a5409508824f55a, type: 3}
+      propertyPath: script1
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 224244958678104624, guid: 8016b5d29d0e7d147a5409508824f55a, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -13503,6 +13568,10 @@ PrefabInstance:
     - target: {fileID: 1010643293622878565, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
       propertyPath: m_TagString
       value: Beacon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1567525907934129959, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
+      propertyPath: script1
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2215764635774404573, guid: aae35dfdd0f34464cab665d7220f038c, type: 3}
       propertyPath: m_Layer
@@ -13825,6 +13894,22 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Beacon
       objectReference: {fileID: 0}
+    - target: {fileID: 4356792676905628686, guid: f3fb81989e2bc2c4fac1af136eec6ca6, type: 3}
+      propertyPath: script1
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356792676905628686, guid: f3fb81989e2bc2c4fac1af136eec6ca6, type: 3}
+      propertyPath: healthObject
+      value: 
+      objectReference: {fileID: 638120191}
+    - target: {fileID: 4356792676905628686, guid: f3fb81989e2bc2c4fac1af136eec6ca6, type: 3}
+      propertyPath: healthObject2
+      value: 
+      objectReference: {fileID: 1030947110}
+    - target: {fileID: 4356792676905628686, guid: f3fb81989e2bc2c4fac1af136eec6ca6, type: 3}
+      propertyPath: healthObject3
+      value: 
+      objectReference: {fileID: 380492133}
     - target: {fileID: 4473843507010245798, guid: f3fb81989e2bc2c4fac1af136eec6ca6, type: 3}
       propertyPath: m_CollisionDetection
       value: 0

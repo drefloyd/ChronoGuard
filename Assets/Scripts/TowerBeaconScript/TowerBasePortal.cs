@@ -55,7 +55,6 @@ public class TowerBasePortal : MonoBehaviour
                 //get the position to teleport to on the top of the tower
                 float x = closestTower.GetComponent<Renderer>().bounds.center.x;
                 float z = closestTower.GetComponent<Renderer>().bounds.center.z;
-
                 float y = closestTower.GetComponent<Renderer>().bounds.extents.y;
                 //set the player's position to those coordinates, need to deactivate and reactivate it
                 player = GameObject.Find("Player");

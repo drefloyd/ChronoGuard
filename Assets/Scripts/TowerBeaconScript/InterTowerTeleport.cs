@@ -14,12 +14,12 @@ public class InterTowerTeleport : MonoBehaviour
 
     GameObject[] towers; //create initial list of towers at start
     AudioManager audioManager;
-    public static int towerposition=3;
+    public static int towerposition;
     private void Awake()
     {
         towers = GameObject.FindGameObjectsWithTag("Tower");
         audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-
+        towerposition=2;
     }
 
     /// <summary>
@@ -60,9 +60,9 @@ public class InterTowerTeleport : MonoBehaviour
                 }
             }
             int targetTowerIndex = (startTowerIndex + 1) > towers.Length - 1 ? 0 : (startTowerIndex + 1);   //teleport to the next tower in the array, wrapping around to the 0th index
-            Debug.Log("Tower Postion: "+targetTowerIndex);
-            Debug.Log("Tower Intail Postion: "+towerposition);
             towerposition=targetTowerIndex;
+            Debug.Log("Tower Postion: "+towerposition);
+
             try
             {
                 //get the position to teleport to on the top of the tower

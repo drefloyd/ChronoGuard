@@ -7,13 +7,10 @@ public class HealthManager : MonoBehaviour
 {
     public string towerTag = "Tower";
     public string beaconTag = "Beacon";
-    AudioManager audioManager;
+    public GameObject healthObject;
+    public GameObject healthObject2;
+    public GameObject healthObject3;
 
-    void Awake()
-    {
-        audioManager=GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-
-    }
     void Update()
     {
         // Check if all game objects with the specified tag are destroyed
@@ -22,41 +19,24 @@ public class HealthManager : MonoBehaviour
             timerScript.isTimerRunning=false;
             // All objects are destroyed, transition to the next scene
             SceneManager.LoadScene(2);
-            audioManager.PlaySFX(audioManager.GameOver);
-
         }
-        else if (InterTowerTeleport.towerposition==3&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        else if (InterTowerTeleport.towerposition==1&&healthObject == null)
         {
             timerScript.isTimerRunning=false;
             // All objects are destroyed, transition to the next scene
             SceneManager.LoadScene(2);
-            audioManager.PlaySFX(audioManager.GameOver);
-
         }
-        else if (InterTowerTeleport.towerposition==2&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        else if (InterTowerTeleport.towerposition==2&&healthObject2 == null)
         {
             timerScript.isTimerRunning=false;
             // All objects are destroyed, transition to the next scene
             SceneManager.LoadScene(2);
-            audioManager.PlaySFX(audioManager.GameOver);
-
         }
-        else if (InterTowerTeleport.towerposition==1&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
-        {
-            timerScript.isTimerRunning=false;
-
-            // All objects are destroyed, transition to the next scene
-            SceneManager.LoadScene(2);
-            audioManager.PlaySFX(audioManager.GameOver);
-
-        }
-        else if (InterTowerTeleport.towerposition==0&&GameObject.FindGameObjectsWithTag(towerTag).Length == 0)
+        else if (InterTowerTeleport.towerposition==0&&healthObject3 == null)
         {
             timerScript.isTimerRunning=false;
             // All objects are destroyed, transition to the next scene
             SceneManager.LoadScene(2);
-            audioManager.PlaySFX(audioManager.GameOver);
-
         }
     }
 }
