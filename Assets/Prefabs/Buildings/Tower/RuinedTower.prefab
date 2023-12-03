@@ -160,7 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c4560347033baa4fa0fb75d4fb802d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
   currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!1 &353138681616956702
@@ -1484,7 +1483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3907679614406300944, guid: b4678610a716da54dad45bcd5ea496d8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3907679614406300944, guid: b4678610a716da54dad45bcd5ea496d8, type: 3}
       propertyPath: m_LocalScale.z
@@ -1786,6 +1785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2533cb8d905b91a4eb8448bfa7f7c5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerposition: 0
 --- !u!54 &4968915059387148251
 Rigidbody:
   m_ObjectHideFlags: 0
