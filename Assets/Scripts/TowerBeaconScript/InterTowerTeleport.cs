@@ -12,7 +12,7 @@ public class InterTowerTeleport : MonoBehaviour
 
     InputManager manager;
 
-    GameObject[] towers; //create initial list of towers at start
+    public static GameObject[] towers; //create initial list of towers at start
     AudioManager audioManager;
     public static int towerposition;
     private void Awake()

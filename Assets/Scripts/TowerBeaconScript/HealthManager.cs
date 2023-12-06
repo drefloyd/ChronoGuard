@@ -20,23 +20,12 @@ public class HealthManager : MonoBehaviour
             // All objects are destroyed, transition to the next scene
             SceneManager.LoadScene(2);
         }
-        else if (InterTowerTeleport.towerposition==1&&healthObject == null)
+        else if (InterTowerTeleport.towers[InterTowerTeleport.towerposition]==null)
         {
             timerScript.isTimerRunning=false;
             // All objects are destroyed, transition to the next scene
             SceneManager.LoadScene(2);
         }
-        else if (InterTowerTeleport.towerposition==2&&healthObject2 == null)
-        {
-            timerScript.isTimerRunning=false;
-            // All objects are destroyed, transition to the next scene
-            SceneManager.LoadScene(2);
-        }
-        else if (InterTowerTeleport.towerposition==0&&healthObject3 == null)
-        {
-            timerScript.isTimerRunning=false;
-            // All objects are destroyed, transition to the next scene
-            SceneManager.LoadScene(2);
-        }
+      
     }
 }
