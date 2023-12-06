@@ -72,7 +72,7 @@ public class pauseMenu : MonoBehaviour
         PlayerUI.SetActive(false);
         Time.timeScale = 1f;
         gameisPaused = true;
-        timerScript.isTimerRunning = false;
+        timerScript.isTimerRunning = true;
     }
     public void Option()
     {
